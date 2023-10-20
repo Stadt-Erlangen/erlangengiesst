@@ -47,7 +47,7 @@ const StyledWrapper = styled.div`
   display: flex;
   margin: 20px 40px 20px 40px;
   cursor: pointer;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   gap: 16px;
 
@@ -97,14 +97,14 @@ const OverlayTop: FC = () => {
           </ButtonRound>
           <Login width='fit-content' noLogout={true} />
         </StyledButtonWrapper>
-        <SlackButton />
+        {/* <SlackButton /> */}
       </StyledWrapper>
-      {whatsNew && (
+      {/* {whatsNew && (
         <StyledNewsSection aria-label='News und Updates'>
           <OverlayTitle size='xl' title={whatsNew.title} />
           <OverlayDescription content={whatsNew.description} />
         </StyledNewsSection>
-      )}
+      )} */}
     </StyledTop>
   );
 };

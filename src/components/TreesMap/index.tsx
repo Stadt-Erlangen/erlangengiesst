@@ -4,7 +4,7 @@ import { useTreeData } from '../../utils/hooks/useTreeData';
 import { useCommunityData } from '../../utils/hooks/useCommunityData';
 import { useRainGeoJson } from '../../utils/hooks/useRainGeoJson';
 import { useCurrentTreeId } from '../../utils/hooks/useCurrentTreeId';
-import { usePumpsGeoJson } from '../../utils/hooks/usePumpsGeoJson';
+// import { usePumpsGeoJson } from '../../utils/hooks/usePumpsGeoJson';
 import { TreesMap } from './TreesMap';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useRouter } from 'next/router';
@@ -22,7 +22,7 @@ export const Map: FC<{
   const { openNav, closeNav } = useActions();
   const { data: communityData } = useCommunityData();
   const { data: rainGeoJson } = useRainGeoJson();
-  const { data: pumpsGeoJson } = usePumpsGeoJson();
+  // const { data: pumpsGeoJson } = usePumpsGeoJson();
   const treeId = useCurrentTreeId();
   const { treeData: selectedTreeData } = useTreeData(treeId);
   const { push } = useRouter();
@@ -43,7 +43,7 @@ export const Map: FC<{
       visibleMapLayer={visibleMapLayer}
       isNavOpen={!!isNavOpened}
       showControls={showOverlay}
-      pumpsGeoJson={pumpsGeoJson || null}
+      // pumpsGeoJson={pumpsGeoJson || null}
       ageRange={ageRange || []}
       mapViewFilter={mapViewFilter}
       mapWaterNeedFilter={mapWaterNeedFilter}

@@ -120,7 +120,7 @@ const MapLayerLegend: FC = () => {
           {visibleMapLayer === 'rain' && <RainColorLegend />}
         </FlexRow>
       )}
-      {visibleMapLayer === 'pumps' && <PumpsColorLegend />}
+      {/* {visibleMapLayer === 'pumps' && <PumpsColorLegend />} */}
 
       <FlexColumnLast isLast={true}>
         <StyledCardDescription>Datenpunkte</StyledCardDescription>
@@ -134,7 +134,7 @@ const MapLayerLegend: FC = () => {
             <LegendRadio checked={visibleMapLayer === 'trees'} />
             <StyledItemLabel>Straßen- & Anlagenbäume</StyledItemLabel>
           </FlexRowFit>
-          <FlexRowFit
+          {/* <FlexRowFit
             isActive={visibleMapLayer === 'pumps'}
             onClick={() => {
               setVisibleMapLayer('pumps');
@@ -142,7 +142,7 @@ const MapLayerLegend: FC = () => {
           >
             <LegendRadio checked={visibleMapLayer === 'pumps'} />
             <StyledItemLabel>Öffentl. Pumpen</StyledItemLabel>
-          </FlexRowFit>
+          </FlexRowFit> */}
           <FlexRowFit
             isActive={visibleMapLayer === 'rain'}
             onClick={() => {
